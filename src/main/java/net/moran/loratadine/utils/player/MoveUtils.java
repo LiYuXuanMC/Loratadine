@@ -1,6 +1,6 @@
 package net.moran.loratadine.utils.player;
 
-import lombok.Generated;
+
 import net.moran.loratadine.utils.wrapper.Wrapper;
 
 public final class MoveUtils implements Wrapper {
@@ -34,7 +34,7 @@ public final class MoveUtils implements Wrapper {
       return Math.toRadians((double)rotationYaw);
    }
 
-   @Generated
+
    private MoveUtils() {
       throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
    }

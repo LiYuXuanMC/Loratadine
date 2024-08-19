@@ -1,7 +1,7 @@
 package net.moran.loratadine.utils.unsafe;
 
 import java.lang.reflect.Field;
-import lombok.Generated;
+
 import sun.misc.Unsafe;
 
 public class UnsafeUtils {
@@ -63,7 +63,7 @@ public class UnsafeUtils {
    }
 
    public static void loadClass(Class<?> clazz) {
-      unsafe.ensureClassInitialized(clazz);
+      //unsafe.ensureClassInitialized(clazz);
    }
 
    public static long getArrayBaseOffset(Class<?> clazz) {
@@ -74,7 +74,7 @@ public class UnsafeUtils {
       return (long)unsafe.arrayIndexScale(clazz);
    }
 
-   @Generated
+
    public static Unsafe getUnsafe() {
       return unsafe;
    }

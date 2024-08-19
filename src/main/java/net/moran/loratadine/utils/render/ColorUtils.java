@@ -1,7 +1,7 @@
 package net.moran.loratadine.utils.render;
 
 import java.awt.Color;
-import lombok.Generated;
+
 
 public final class ColorUtils {
    public static Color rainbow(int speed, int index) {
@@ -45,7 +45,7 @@ public final class ColorUtils {
       return (a & 0xFF) << 24 | (r & 0xFF) << 16 | (g & 0xFF) << 8 | b & 0xFF;
    }
 
-   @Generated
+
    private ColorUtils() {
       throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
    }

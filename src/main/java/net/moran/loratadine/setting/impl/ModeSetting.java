@@ -2,7 +2,7 @@ package net.moran.loratadine.setting.impl;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import lombok.Generated;
+
 import net.moran.loratadine.modules.Module;
 import net.moran.loratadine.setting.HideIf;
 import net.moran.loratadine.setting.Setting;
@@ -34,7 +34,7 @@ public class ModeSetting extends Setting<String> {
       this.setValue(element.getAsString());
    }
 
-   @Generated
+
    public String[] getValues() {
       return this.values;
    }

@@ -3,7 +3,7 @@ package net.moran.loratadine.utils.render;
 import com.mojang.blaze3d.platform.NativeImage;
 import com.mojang.blaze3d.systems.RenderSystem;
 import java.awt.image.BufferedImage;
-import lombok.Generated;
+
 import net.minecraft.client.renderer.texture.DynamicTexture;
 
 public final class GLUtils {
@@ -28,8 +28,8 @@ public final class GLUtils {
       return texture.getId();
    }
 
-   @Generated
-   private GLUtils() {
+
+    private GLUtils() {
       throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
    }
 }

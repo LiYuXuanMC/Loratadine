@@ -3,7 +3,7 @@ package net.moran.loratadine.modules.impl.combat;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import lombok.Generated;
+
 import net.minecraft.network.protocol.game.ServerboundInteractPacket;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.Entity;
@@ -104,12 +104,12 @@ public class KillAura extends Module {
       }
    }
 
-   @Generated
+
    public static LivingEntity getTarget() {
       return target;
    }
 
-   @Generated
+
    public List<LivingEntity> getTargets() {
       return this.targets;
    }

@@ -5,7 +5,7 @@ import java.math.RoundingMode;
 import java.security.SecureRandom;
 import java.text.DecimalFormat;
 import java.util.Random;
-import lombok.Generated;
+
 
 public final class MathUtils {
    public static final DecimalFormat DF_0 = new DecimalFormat("0");
@@ -117,7 +117,7 @@ public final class MathUtils {
       return (double)Math.abs(a - b) < 1.0E-4;
    }
 
-   @Generated
+
    private MathUtils() {
       throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
    }

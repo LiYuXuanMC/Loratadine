@@ -1,6 +1,6 @@
 package net.moran.loratadine.modules.impl.player;
 
-import lombok.Generated;
+
 import net.minecraft.world.inventory.ChestMenu;
 import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.item.ArmorItem;
@@ -112,47 +112,47 @@ public class ChestStealer extends Module {
       }
    }
 
-   @Generated
+
    public BooleanSetting getNoDelay() {
       return this.noDelay;
    }
 
-   @Generated
+
    public BooleanSetting getSilent() {
       return this.silent;
    }
 
-   @Generated
+
    public TimerUtils getStopwatch2() {
       return this.stopwatch2;
    }
 
-   @Generated
+
    public TimerUtils getStopwatch() {
       return this.stopwatch;
    }
 
-   @Generated
+
    public long getNextClick() {
       return this.nextClick;
    }
 
-   @Generated
+
    public int getLastClick() {
       return this.lastClick;
    }
 
-   @Generated
+
    public int getLastSteal() {
       return this.lastSteal;
    }
 
-   @Generated
+
    public NumberSetting getDelay() {
       return this.delay;
    }
 
-   @Generated
+
    public BooleanSetting getTrash() {
       return this.trash;
    }

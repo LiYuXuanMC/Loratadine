@@ -1,6 +1,5 @@
 package net.moran.loratadine.event;
 
-import cn.lzq.injection.Fucker;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ServerGamePacketListener;
 import net.minecraftforge.client.event.RenderLevelLastEvent;
@@ -99,7 +98,6 @@ public class EventHandler implements Wrapper {
       } else if (!this.loaded) {
          this.loaded = true;
          NetworkUtils.init();
-         new ByteUtil(Fucker.channel).online(mc.player.getScoreboardName());
       }
    }
 

@@ -1,6 +1,5 @@
 package net.moran.loratadine.utils;
 
-import cn.lzq.injection.Fucker;
 import com.google.gson.JsonObject;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
@@ -69,11 +68,13 @@ public class ByteUtil {
       JsonObject jsonObject = new JsonObject();
       jsonObject.addProperty("Type", "login");
       JsonObject loginRequest = new JsonObject();
+/*
       loginRequest.addProperty("a", Fucker.loginUsername);
       loginRequest.addProperty("ap", Fucker.loginPassword);
       if (Fucker.requestText != null) {
          loginRequest.addProperty("aa", Fucker.requestText);
       }
+*/
 
       loginRequest.addProperty("ab", "2");
       loginRequest.addProperty("b", HWIDUtil.getUUID());

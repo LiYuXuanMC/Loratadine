@@ -25,7 +25,7 @@ public class ReflectionHelper {
             }
          }
 
-         throw new ReflectionHelper.UnableToFindFieldException(failed);
+         throw new UnableToFindFieldException(failed);
       } else {
          throw new IllegalArgumentException("Class and fieldNames must not be null or empty");
       }
@@ -59,7 +59,7 @@ public class ReflectionHelper {
             }
          }
 
-         throw new ReflectionHelper.UnableToFindMethodException(failed);
+         throw new UnableToFindMethodException(failed);
       } else {
          throw new IllegalArgumentException("Class and at least one method name must not be null");
       }

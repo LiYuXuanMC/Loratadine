@@ -1,6 +1,5 @@
 package net.moran.loratadine.utils;
 
-import dev.annotations.JNICInclude;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -12,7 +11,6 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Enumeration;
 import javax.annotation.Nonnull;
 
-@JNICInclude
 public class HWIDUtil {
    public static String bytesToHexString(byte[] src) {
       StringBuilder stringBuilder = new StringBuilder();

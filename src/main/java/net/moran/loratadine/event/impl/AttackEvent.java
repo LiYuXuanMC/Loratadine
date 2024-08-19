@@ -1,6 +1,6 @@
 package net.moran.loratadine.event.impl;
 
-import lombok.Generated;
+
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.moran.loratadine.event.CancellableEvent;
@@ -14,13 +14,13 @@ public class AttackEvent extends CancellableEvent {
       this.target = target;
    }
 
-   @Generated
-   public Player getPlayer() {
+
+    public Player getPlayer() {
       return this.player;
    }
 
-   @Generated
-   public Entity getTarget() {
+
+    public Entity getTarget() {
       return this.target;
    }
 }

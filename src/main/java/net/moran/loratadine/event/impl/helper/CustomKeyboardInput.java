@@ -1,6 +1,6 @@
 package net.moran.loratadine.event.impl.helper;
 
-import lombok.Generated;
+
 import net.minecraft.client.Options;
 import net.minecraft.client.player.Input;
 import net.minecraftforge.api.distmarker.Dist;
@@ -36,7 +36,7 @@ public class CustomKeyboardInput extends Input {
       }
    }
 
-   @Generated
+
    public void setCancel(boolean cancel) {
       this.cancel = cancel;
    }

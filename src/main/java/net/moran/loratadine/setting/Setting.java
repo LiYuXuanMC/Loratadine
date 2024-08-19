@@ -2,7 +2,7 @@ package net.moran.loratadine.setting;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import lombok.Generated;
+
 import net.moran.loratadine.modules.Module;
 
 public abstract class Setting<T> {
@@ -23,28 +23,26 @@ public abstract class Setting<T> {
 
    public abstract void formJson(JsonElement var1);
 
-   @Generated
-   public String getName() {
+
+    public String getName() {
       return this.name;
    }
 
-   @Generated
-   public Module getPresent() {
+
+    public Module getPresent() {
       return this.present;
    }
 
-   @Generated
-   public T getValue() {
+
+    public T getValue() {
       return this.value;
    }
 
-   @Generated
-   public HideIf getHideIf() {
-      return this.hideIf;
+    public void setValue(T value) {
+      this.value = value;
    }
 
-   @Generated
-   public void setValue(T value) {
-      this.value = value;
+    public HideIf getHideIf() {
+      return this.hideIf;
    }
 }

@@ -1,7 +1,7 @@
 package net.moran.loratadine.modules;
 
 import java.util.ArrayList;
-import lombok.Generated;
+
 import net.moran.loratadine.Loratadine;
 import net.moran.loratadine.setting.Setting;
 import net.moran.loratadine.utils.ClientUtils;
@@ -62,43 +62,39 @@ public abstract class Module implements Wrapper {
    protected void onDisable() {
    }
 
-   @Generated
-   public String getName() {
+
+    public String getName() {
       return this.name;
    }
 
-   @Generated
-   public Category getCategory() {
+
+    public Category getCategory() {
       return this.category;
    }
 
-   @Generated
-   public ArrayList<Setting<?>> getSettings() {
+
+    public ArrayList<Setting<?>> getSettings() {
       return this.settings;
    }
 
-   @Generated
-   public int getKey() {
+
+    public int getKey() {
       return this.key;
    }
 
-   @Generated
-   public boolean isEnabled() {
-      return this.enabled;
-   }
-
-   @Generated
-   public String getSuffix() {
-      return this.suffix;
-   }
-
-   @Generated
-   public void setKey(int key) {
+    public void setKey(int key) {
       this.key = key;
    }
 
-   @Generated
-   public void setSuffix(String suffix) {
+    public boolean isEnabled() {
+      return this.enabled;
+   }
+
+    public String getSuffix() {
+      return this.suffix;
+   }
+
+    public void setSuffix(String suffix) {
       this.suffix = suffix;
    }
 }

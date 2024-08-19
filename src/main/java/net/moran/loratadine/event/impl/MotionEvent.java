@@ -1,23 +1,21 @@
 package net.moran.loratadine.event.impl;
 
-import lombok.Generated;
+
 import net.moran.loratadine.event.Event;
 
 public class MotionEvent implements Event {
-   private Event.Side side;
+    private Side side;
 
-   @Generated
-   public Event.Side getSide() {
-      return this.side;
-   }
 
-   @Generated
-   public void setSide(Event.Side side) {
-      this.side = side;
-   }
+    public MotionEvent(Side side) {
+        this.side = side;
+    }
 
-   @Generated
-   public MotionEvent(Event.Side side) {
-      this.side = side;
-   }
+    public Event.Side getSide() {
+        return this.side;
+    }
+
+    public void setSide(Side side) {
+        this.side = side;
+    }
 }

@@ -38,7 +38,7 @@ public class NetworkUtils implements Wrapper {
                            connField.setAccessible(true);
                            Channel channel = (Channel)connField.get(connection);
                            ChannelPipeline pipeline = channel.pipeline();
-                           ChannelDuplexHandler packetHandler = new NetworkUtils.PacketHandler(handler);
+                           ChannelDuplexHandler packetHandler = new PacketHandler(handler);
                            pipeline.addBefore("packet_handler", "PacketHandler", packetHandler);
                            connField.setAccessible(false);
                            return;

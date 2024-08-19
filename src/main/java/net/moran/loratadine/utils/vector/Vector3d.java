@@ -1,6 +1,6 @@
 package net.moran.loratadine.utils.vector;
 
-import lombok.Generated;
+
 
 public class Vector3d {
    public double x;
@@ -60,18 +60,18 @@ public class Vector3d {
          : Math.floor(this.x) == Math.floor(vector.x) && Math.floor(this.y) == Math.floor(vector.y) && Math.floor(this.z) == Math.floor(vector.z);
    }
 
-   @Generated
-   public void setX(double x) {
+
+    public void setX(double x) {
       this.x = x;
    }
 
-   @Generated
-   public void setY(double y) {
+
+    public void setY(double y) {
       this.y = y;
    }
 
-   @Generated
-   public void setZ(double z) {
+
+    public void setZ(double z) {
       this.z = z;
    }
 }

@@ -1,6 +1,6 @@
 package net.moran.loratadine.utils.player;
 
-import lombok.Generated;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.AirBlock;
 import net.minecraft.world.level.block.Block;
@@ -34,8 +34,8 @@ public final class BlockUtils implements Wrapper {
       return mc.level.getBlockState(blockPos).getBlock();
    }
 
-   @Generated
-   private BlockUtils() {
+
+    private BlockUtils() {
       throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
    }
 }

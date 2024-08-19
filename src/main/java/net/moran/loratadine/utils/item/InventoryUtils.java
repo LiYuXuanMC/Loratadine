@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
-import lombok.Generated;
+
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -129,14 +129,14 @@ public final class InventoryUtils implements Wrapper {
 
    public static boolean isBestTool(AbstractContainerMenu handler, ItemStack itemStack) {
       int type = getToolType(itemStack);
-      InventoryUtils.Tool bestTool = new InventoryUtils.Tool(-1, -1.0, ItemStack.EMPTY);
+      Tool bestTool = new Tool(-1, -1.0, ItemStack.EMPTY);
 
       for (int i = 9; i < 45; i++) {
          ItemStack stack = handler.getSlot(i).getItem();
          if (!stack.isEmpty() && stack.getItem() instanceof DiggerItem && type == getToolType(stack)) {
             double efficiency = (double)getToolScore(stack);
             if (efficiency > (double)getToolScore(bestTool.getItem())) {
-               bestTool = new InventoryUtils.Tool(i, efficiency, stack);
+               bestTool = new Tool(i, efficiency, stack);
             }
          }
       }
@@ -319,7 +319,7 @@ public final class InventoryUtils implements Wrapper {
       return getPlayerArmorScore(player) < getPlayerArmorScore(mc.player);
    }
 
-   @Generated
+
    private InventoryUtils() {
       throw new UnsupportedOperationException("This is a utility class and cannot be instantiated");
    }

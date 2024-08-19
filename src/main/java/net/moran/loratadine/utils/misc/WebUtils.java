@@ -1,6 +1,5 @@
 package net.moran.loratadine.utils.misc;
 
-import dev.annotations.JNICInclude;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,7 +7,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 
-@JNICInclude
 public class WebUtils {
    public static String get(String url, boolean preventRedirect) throws IOException {
       HttpURLConnection con = (HttpURLConnection)new URL(url).openConnection();

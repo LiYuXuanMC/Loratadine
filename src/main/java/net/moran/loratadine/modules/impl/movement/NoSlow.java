@@ -1,6 +1,5 @@
 package net.moran.loratadine.modules.impl.movement;
 
-import dev.annotations.JNICInclude;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import net.minecraft.client.player.Input;
@@ -31,7 +30,6 @@ import net.moran.loratadine.event.impl.helper.CustomKeyboardInput;
 import net.moran.loratadine.modules.Category;
 import net.moran.loratadine.modules.Module;
 
-@JNICInclude
 public class NoSlow extends Module {
    Input old;
    boolean shouldSlow;

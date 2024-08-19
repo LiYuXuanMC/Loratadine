@@ -2,7 +2,7 @@ package net.moran.loratadine.setting.impl;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import lombok.Generated;
+
 import net.moran.loratadine.modules.Module;
 import net.moran.loratadine.setting.HideIf;
 import net.moran.loratadine.setting.Setting;
@@ -38,17 +38,17 @@ public class NumberSetting extends Setting<Number> {
       this.setValue(element.getAsNumber());
    }
 
-   @Generated
+
    public Number getMaxValue() {
       return this.maxValue;
    }
 
-   @Generated
+
    public Number getMinValue() {
       return this.minValue;
    }
 
-   @Generated
+
    public Number getStep() {
       return this.step;
    }

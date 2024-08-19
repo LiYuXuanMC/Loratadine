@@ -1,11 +1,9 @@
 package net.moran.loratadine.utils;
 
-import dev.annotations.JNICInclude;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-@JNICInclude
 public class SystemUtils {
    public static boolean isServiceExist(String serviceName) {
       try {
