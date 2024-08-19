@@ -46,7 +46,7 @@ DWORD WINAPI Inject(LPVOID parm) {
         jclass threadClass = (*jniEnv)->GetObjectClass(jniEnv, thread);
         jstring name = (*jniEnv)->CallObjectMethod(jniEnv, thread, (*jniEnv)->GetMethodID(jniEnv, threadClass, "getName", "()Ljava/lang/String;"));
         const char* str = (*jniEnv)->GetStringUTFChars(jniEnv, name, FALSE);
-        if (!strcmp(str, "Client thread")) {
+        if (!strcmp(str, "Render thread")) {
             clientThread = thread;
             (*jniEnv)->ReleaseStringUTFChars(jniEnv, name, str);
             break;
