@@ -1,0 +1,8 @@
+{
+  "RESOURCE_SUFFIXES": [
+    "ttf"
+  ],
+  "GENERATED_METHOD_HEADER": "method.hpp",
+  "GENERATED_BYTES_HEADER": "bytes.hpp",
+  "GENERATED_CLASSES_DATA_HEADER": "classes.hpp"
+}
