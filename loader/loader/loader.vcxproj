@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{0b4b3068-b172-442b-8665-81a61c4066bf}</ProjectGuid>
+    <RootNamespace>loader</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>loader</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(ProjectDir)\ext;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\ext\detours;$(ProjectDir)\ext\jni;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(ProjectDir)\ext;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\ext\detours;$(ProjectDir)\ext\jni;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;ALLOYLOADER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;ALLOYLOADER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;ALLOYLOADER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>jvm.lib;detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;ALLOYLOADER_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>jvm.lib;detours.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\base\jvm\hotspot\classes\array.cpp" />
+    <ClCompile Include="src\base\jvm\hotspot\classes\const_pool.cpp" />
+    <ClCompile Include="src\base\jvm\hotspot\classes\c_method.cpp" />
+    <ClCompile Include="src\base\jvm\hotspot\classes\field_info.cpp" />
+    <ClCompile Include="src\base\jvm\hotspot\classes\instance_klass.cpp" />
+    <ClCompile Include="src\base\jvm\hotspot\classes\java_thread.cpp" />
+    <ClCompile Include="src\base\jvm\hotspot\classes\symbol.cpp" />
+    <ClCompile Include="src\base\jvm\hotspot\utility\jvm_internal.cpp" />
+    <ClCompile Include="src\base\jvm\hotspot\utility\jvm_static.cpp" />
+    <ClCompile Include="src\base\jvm\hotspot\utility\vm_helper.cpp" />
+    <ClCompile Include="src\base\mc\SDK.cpp" />
+    <ClCompile Include="src\base\jvm\JVM.cpp" />
+    <ClCompile Include="src\base\Base.cpp" />
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\base\classes\classes.hpp" />
+    <ClInclude Include="src\base\jvm\hotspot\classes\array.h" />
+    <ClInclude Include="src\base\jvm\hotspot\classes\const_pool.h" />
+    <ClInclude Include="src\base\jvm\hotspot\classes\c_method.h" />
+    <ClInclude Include="src\base\jvm\hotspot\classes\field_info.h" />
+    <ClInclude Include="src\base\jvm\hotspot\classes\instance_klass.h" />
+    <ClInclude Include="src\base\jvm\hotspot\classes\java_thread.h" />
+    <ClInclude Include="src\base\jvm\hotspot\classes\symbol.h" />
+    <ClInclude Include="src\base\jvm\hotspot\include_header.h" />
+    <ClInclude Include="src\base\jvm\hotspot\utility\jvm_internal.h" />
+    <ClInclude Include="src\base\jvm\hotspot\utility\jvm_static.h" />
+    <ClInclude Include="src\base\jvm\hotspot\utility\memory_utility.h" />
+    <ClInclude Include="src\base\jvm\hotspot\utility\vm_helper.h" />
+    <ClInclude Include="src\base\mc\SDK.hpp" />
+    <ClInclude Include="src\base\jvm\JVM.hpp" />
+    <ClInclude Include="src\base\Base.h" />
+    <ClInclude Include="ext\detours\include\detours.h" />
+    <ClInclude Include="ext\detours\include\detver.h" />
+    <ClInclude Include="ext\detours\include\syelog.h" />
+    <ClInclude Include="ext\jni\classfile_constants.h" />
+    <ClInclude Include="ext\jni\jawt.h" />
+    <ClInclude Include="ext\jni\jawt_md.h" />
+    <ClInclude Include="ext\jni\jdwpTransport.h" />
+    <ClInclude Include="ext\jni\jni.h" />
+    <ClInclude Include="ext\jni\jni_md.h" />
+    <ClInclude Include="ext\jni\jvmti.h" />
+    <ClInclude Include="ext\jni\jvmticmlr.h" />
+    <ClInclude Include="ext\lazy_importer.hpp" />
+    <ClInclude Include="ext\titan_hook.h" />
+    <ClInclude Include="src\utils\function_traits.hpp" />
+    <ClInclude Include="src\base\jvm\jni\types\Array.hpp" />
+    <ClInclude Include="src\base\jvm\jni\types\Env.hpp" />
+    <ClInclude Include="src\base\jvm\jni\types\Field.hpp" />
+    <ClInclude Include="src\base\jvm\jni\types\Klass.hpp" />
+    <ClInclude Include="src\base\jvm\jni\types\Method.hpp" />
+    <ClInclude Include="src\base\jvm\jni\types\Misc.hpp" />
+    <ClInclude Include="src\base\jvm\jni\types\ObjectWrapper.hpp" />
+    <ClInclude Include="src\base\jvm\jni\Wrapper.hpp" />
+    <ClInclude Include="src\utils\Singleton.hpp" />
+    <ClInclude Include="src\utils\Structs.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\base\jvm\hotspot\utility\getter.asm" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
